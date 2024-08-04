@@ -14,31 +14,16 @@
         <div class="text">Etch A Sketch 🎨</div>
     </div>
     <div class="input">
-        <div class="number">
-            <label for="number">No of Boxes :</label>
-            <input type="number" name="number" id="boxes" max="100">
-            <button>Enter</button>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="16" class="slider" id="myRange">
         </div>
+    </div>
+    <div class="input">
         <div id="colors">
-            <label for="colors">Choose the color:</label>
-            <input type="color" name="colors" id="color"> <button id="pickbutton">Pick</button>
-            <!-- <select name="colors" id="colors">
-                <option style="background-color: green; color: white;" value="green">Green</option>
-                <option style="background-color: red; color: white;" value="red">Red</option>
-                <option style="background-color: black; color: white;" value="black">Black</option>
-                <option value="white">White</option>
-                <option style="background-color: blue; color:white" value="blue">Blue</option>
-                <option value="random"><input type="color">Enter the color</option>
-            </select> -->
+            <input type="color" name="colors" id="color">
         </div>
         <div>
-            <!-- <button id="hideborder">
-                Hide Box Borders
-            </button>
-            <button id="showborder">
-                Show Box Borders
-            </button> -->
-            <button id="clear">Clear </button>
+            <button id="clear"><img src="images/eraser-4-svgrepo-com.svg" alt="erase image"> </button>
         </div>
     </div>
     <div class="body">

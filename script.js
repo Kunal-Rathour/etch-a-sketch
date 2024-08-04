@@ -2,26 +2,30 @@
 let pickedColor = "000000";
 document.addEventListener("DOMContentLoaded", () => {
     const colorPicker = document.querySelector("#color");
-    const pickButton = document.querySelector("#pickbutton");
+    pickedColor = colorPicker.value;
+    // const pickButton = document.querySelector("#pickbutton");
 
 
-    pickButton.addEventListener("click", () => {
-        pickedColor = colorPicker.value;
-        console.log(`Picked color: ${pickedColor}`);
-    });
+    // pickButton.addEventListener("click", () => {
+    //     pickedColor = colorPicker.value;
+    //     console.log(`Picked color: ${pickedColor}`);
+    // });
 });
+const slider = document.querySelector("#myRange")
+
+
 const container = document.querySelector("#container");
 const button = document.querySelector("button");
 const numberOfBoxes = document.querySelector("input");
 
 // const drawButton = document.querySelector("#draw");
 const clearButton = document.querySelector("#clear");
-function createBoard() {
-    let size = parseInt(numberOfBoxes.value);
-    if (size > 100) {
-        size = 100;
-        alert("Max Allowed size for the board is 100;\nCreating 100x100 Board ")
-    }
+function createBoard(size) {
+
+    // if (size > 100) {
+    //     size = 100;
+    //     alert("Max Allowed size for the board is 100;\nCreating 100x100 Board ")
+    // }
     // const maxWidth = Math.floor(600 / size);
     // const maxHeight = Math.floor(600 / size);
 
@@ -48,6 +52,7 @@ function createBoard() {
 }
 
 function draw() {
+
     let isDrawing = false;
 
     container.addEventListener("mousedown", () => {
@@ -66,6 +71,8 @@ function draw() {
     drawBoxes.forEach(box => {
         box.addEventListener("mouseover", () => {
             if (isDrawing) {
+                const colorPicker = document.querySelector("#color");
+                pickedColor = colorPicker.value;
                 box.style.backgroundColor = `${pickedColor}`;
             }
         });
@@ -101,3 +108,6 @@ function clearScreen() {
 // })
 button.addEventListener("click", createBoard);
 clearButton.addEventListener("click", clearScreen);
+slider.addEventListener("input", () => {
+    createBoard(slider.value);
+})
