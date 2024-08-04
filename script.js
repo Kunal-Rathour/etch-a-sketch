@@ -1,5 +1,5 @@
 "use strict";
-let pickedColor;
+let pickedColor = "000000";
 document.addEventListener("DOMContentLoaded", () => {
     const colorPicker = document.querySelector("#color");
     const pickButton = document.querySelector("#pickbutton");
