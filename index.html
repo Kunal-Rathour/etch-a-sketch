@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch A Sketch</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="text">Etch A Sketch 🎨</div>
+    </div>
+    <div class="input">
+        <div class="number">
+            <label for="number">No of Boxes :</label>
+            <input type="number" name="number" id="boxes" max="100">
+            <button>Enter</button>
+        </div>
+        <div id="colors">
+            <label for="colors">Choose the color:</label>
+            <input type="color" name="colors" id="color"> <button id="pickbutton">Pick</button>
+            <!-- <select name="colors" id="colors">
+                <option style="background-color: green; color: white;" value="green">Green</option>
+                <option style="background-color: red; color: white;" value="red">Red</option>
+                <option style="background-color: black; color: white;" value="black">Black</option>
+                <option value="white">White</option>
+                <option style="background-color: blue; color:white" value="blue">Blue</option>
+                <option value="random"><input type="color">Enter the color</option>
+            </select> -->
+        </div>
+        <div>
+            <!-- <button id="hideborder">
+                Hide Box Borders
+            </button>
+            <button id="showborder">
+                Show Box Borders
+            </button> -->
+            <button id="clear">Clear </button>
+        </div>
+    </div>
+    <div class="body">
+        <div id="container">
+        </div>
+    </div>
+    <script src="script.js"> </script>
+</body>
+
+</html>
